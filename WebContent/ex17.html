@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트</h1>
+
+	<h2>이벤트 (~할때)</h2>
+	<div>
+	<button type="button" id="btn">js테스트버튼</button>
+	<h3 id="display"><font color ="blue">이름출력영역</font></h3>
+	</div>
+</body>
+	<script type="text/javascript">
+	
+		window.onload = function(){
+			/* var testButton = {
+					id:"btn",
+					tag:"button",
+					type:"button",
+					text:"테스트 버튼",
+					onclick:function(){}
+			}; 
+			
+			var testArea = {
+				id:"display",
+				tag:"h3",
+				text:"이름출력 영역",
+				onclick:function(){}
+			}
+			*/
+			
+			var testButton = document.getElementById("btn");  //id-btn DOM ---> 자바스크립트 객체화
+			var testArea = document.getElementById("display"); //id-display DOM ---> 자바스크립트 객체화
+			
+			console.log(testArea);
+			
+			testButton.onclick = function(){
+				console.log("버튼 클릭");
+				testArea.innerHTML = '<font color ="blue">김범준</font>';
+			};	
+
+		};
+	</script>
+</html>

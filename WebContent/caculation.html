@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>계산기</h1>
+	<input id="result" type="text" value="">
+	<br>
+	<button id="nine" type="button">9</button>
+	<button id="eight" type="button">8</button>
+	<button id="seven" type="button">7</button>
+	<button id="divide" type="button">÷</button>
+	<br>
+	<button id="six" type="button">6</button>
+	<button id="five" type="button">5</button>
+	<button id="four" type="button">4</button>
+	<button id="multiply" type="button">x</button>
+	<br>
+	<button id="three" type="button">3</button>
+	<button id="two" type="button">2</button>
+	<button id="one" type="button">1</button>
+	<button id="subtract" type="button">-</button>
+	<br>
+	<button id="zero" type="button">0</button>
+	<button id="reset" type="button">C</button>
+	<button id="eq" type="button">=</button>
+	<button id="plus" type="button">+</button>
+	<br>
+
+</body>
+<script type="text/javascript">
+	window.onload = function() {
+		var result = document.getElementById("result");
+		var nine = document.getElementById("nine");
+		var eight = document.getElementById("eight");
+		var seven = document.getElementById("seven");
+		var divide = document.getElementById("divide");
+		var six = document.getElementById("six");
+		var five = document.getElementById("five");
+		var four = document.getElementById("four");
+		var multiply = document.getElementById("multiply");
+		var three = document.getElementById("three");
+		var two = document.getElementById("two");
+		var one = document.getElementById("one");
+		var subtract = document.getElementById("subtract");
+		var zero = document.getElementById("zero");
+		var reset = document.getElementById("reset");
+		var eq = document.getElementById("eq");
+		var plus = document.getElementById("plus");
+
+		nine.onclick = function() {
+			result.value = result.value + ("9");
+		}
+		eight.onclick = function() {
+			result.value = result.value + ("8");
+		}
+		seven.onclick = function() {
+			result.value = result.value + ("7");
+		}
+		divide.onclick = function() {
+			result.value = result.value + ("/");
+		}
+		six.onclick = function() {
+			result.value = result.value + ("6");
+		}
+		five.onclick = function() {
+			result.value = result.value + ("5");
+		}
+		four.onclick = function() {
+			result.value = result.value + ("4");
+		}
+		multiply.onclick = function() {
+			result.value = result.value + ("x");
+		}
+		three.onclick = function() {
+			result.value = result.value + ("3");
+		}
+		two.onclick = function() {
+			result.value = result.value + ("2");
+		}
+		one.onclick = function() {
+			result.value = result.value + ("1");
+		}
+		subtract.onclick = function() {
+			result.value = result.value + ("-");
+		}
+		zero.onclick = function() {
+			result.value = result.value + ("0");
+		}
+		reset.onclick = function() {
+			result.value = "";
+		}
+		eq.onclick = function() {
+			var nArray;
+			if (result.value.split("+").length === 2) { 
+				var n = result.value.split("+");
+				result.value = parseInt(n[0]) + parseInt(n[1]);
+			} else if (result.value.split("-").length === 2) { 
+				var n = result.value.split("-");
+				result.value = parseInt(n[0]) - parseInt(n[1]);
+			} else if (result.value.split("x").length === 2) {
+				var n = result.value.split("x");
+				result.value = parseInt(n[0]) * parseInt(n[1]);
+			} else if (result.value.split("/").length === 2) { 
+				var n = result.value.split("/");
+				result.value = parseInt(n[0]) / parseInt(n[1]);
+			}
+		plus.onclick = function() {
+			result.value = result.value + ("+");
+			}
+		}
+		result.innerHTML = result.value;
+	}
+</script>
+</html>

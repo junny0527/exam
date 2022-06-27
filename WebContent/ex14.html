@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트</h1>
+
+	<h2>배열</h2>
+
+</body>
+
+	<script type="text/javascript">
+		
+		var array = [];
+		array[0] = 1;
+		array[1] = 2.5;
+		array[2] = "안녕";
+		array[3] = "hello";
+		array[4] = 3>5;
+		
+		console.log(array[0]);
+		console.log(array[1]);
+		console.log(array[2]);
+		console.log(array[3]);
+		console.log(array[4]);
+		
+		console.log(array);
+		
+		console.log("------------------------------------");
+		for(var i =0; i<array.length; i++){
+			var data = array[i]
+			console.log(data);
+		}
+		
+		console.log("------------------------------------");
+		
+		var personVo = {
+				name:"김범준",
+				hp:"010-1111-1111",
+				company:"032-1111-1111"
+		}
+		
+		var array2 = [ 273, "문자열", 5>3 , plus(3,5) ,plus , function(){return 5+100},[273,103],personVo];
+		console.log(array2[0]);
+		console.log(array2[1]);
+		console.log(array2[2]);
+		console.log(array2[3]);
+		console.log(array2[4](5,10));  //plus 만사용하면  정의만 보여줌 콘솔로그에 값을넣으면 그값을 뽐아줌
+		console.log(array2[5]);
+		console.log(array2[5]());
+		console.log(array2[6]);
+		console.log(array2[6][1]);
+		console.log(array2[7]);
+		
+		var name = array2[7].name;
+		console.log("이름:"+name);
+		
+		var hp = array2[7].hp;
+		console.log("번호:"+hp);
+		
+		var company = array2[7].company;
+		console.log("회사번호:"+company);
+		
+		function plus(a,b) {
+			var sum = a+b;
+			return sum
+		}
+		
+	
+	</script>
+
+
+
+</html>
